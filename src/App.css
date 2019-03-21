@@ -1,0 +1,56 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.app-logo {
+  width: 20%;
+  height: 40vmin;
+  background-image: url('./assets/film-roll.svg');
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-size: contain;
+  animation: app-logo-run infinite 60s linear;
+  pointer-events: none;
+}
+
+.app-logo:last-child {
+  animation-direction: reverse;
+}
+
+.app-header {
+  background-color: lightyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(1s0px + 3vmin);
+}
+
+main {
+  padding: 1vmin;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@keyframes app-logo-run {
+  from {
+    background-position-y: -10000%;
+  }
+  to {
+    background-position-y: 0%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .app-logo {
+    background-size: cover;
+    animation: app-logo-run infinite 40s linear;
+  }
+  main {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
