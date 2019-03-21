@@ -14,6 +14,7 @@ describe('Filters should', () => {
     const wrapper = mount(
       <Filters
         genres={genres}
+        currentMoviesGenres={[15, 18, 26]}
         onChangeGenreFilters={jest.fn()}
         onChangeMinRating={jest.fn()}
         value={'cat'}

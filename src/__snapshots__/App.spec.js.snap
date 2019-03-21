@@ -22,6 +22,7 @@ exports[`App should have a consistent structure 1`] = `
     </AppHeader>
     <main>
       <Filters
+        currentMoviesGenres={Array []}
         filters={Array []}
         genres={Array []}
         onChangeGenreFilters={[Function]}

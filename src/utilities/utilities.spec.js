@@ -1,4 +1,4 @@
-import { parseGenres, parseTitle, filterMovies } from './'
+import { parseGenres, getUniqueMovieGenres, parseTitle, filterMovies } from './'
 import { movies, genres } from '../fixtures'
 
 describe('parseGenres should', () => {
@@ -26,6 +26,28 @@ describe('parseGenres should', () => {
   it('return an empty objects when provided with an empty array of genres from the API', () => {
     const genresFromAPI = []
     expect(parseGenres(genresFromAPI)).toEqual({})
+  })
+})
+
+describe('getUniqueMovieGenres should', () => {
+  it('exist', () => {
+    expect(getUniqueMovieGenres).toBeDefined()
+  })
+
+  it('return a list of filters without any duplicates', () => {
+    expect(getUniqueMovieGenres(movies).sort((a, b) => a - b)).toEqual([
+      12,
+      15,
+      18,
+      23,
+      24,
+      26,
+      19432,
+    ])
+  })
+
+  it('return an empty objects when provided with an empty list of movies', () => {
+    expect(getUniqueMovieGenres([])).toEqual([])
   })
 })
 

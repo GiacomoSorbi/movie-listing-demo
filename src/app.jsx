@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
 import './app.css'
 import { API } from './constants'
-import { parseGenres } from './utilities'
+import { parseGenres, getUniqueMovieGenres } from './utilities'
 import AppHeader from './components/app-header'
 import Filters from './components/filters'
 import MovieList from './components/movie-list'
 
 class App extends Component {
-  state = { movies: [], error: null, filters: [], genres: [], minRating: 0 }
+  state = {
+    movies: [],
+    error: null,
+    filters: [],
+    genres: [],
+    minRating: 0,
+    uniqueMoviesGenres: [],
+  }
   onChangeGenreFilters = event => {
     const id = +event.currentTarget.id
     const index = this.state.filters.indexOf(id)
@@ -26,24 +33,39 @@ class App extends Component {
     fetch(`${API.BASE_URI}movie/now_playing?api_key=${API.API_KEY.V3}`, {
       'Content-Type': 'application/json',
     })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(json => {
+            throw new Error(json.message || res.status)
+          })
+        }
+        return res.json()
+      })
       .then(res => {
         this.setState({
           movies: res.results.sort(
             (movA, movB) => movB.popularity - movA.popularity,
           ),
+          uniqueMoviesGenres: getUniqueMovieGenres(res.results),
         })
       })
-      .catch(error => this.setState({ error }))
+      .catch(error => this.setState({ error: error.message }))
     //fetching genre list
     fetch(`${API.BASE_URI}genre/movie/list?api_key=${API.API_KEY.V3}`, {
       'Content-Type': 'application/json',
     })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(json => {
+            throw new Error(json.message || res.status)
+          })
+        }
+        return res.json()
+      })
       .then(res => {
         this.setState({ genres: parseGenres(res.genres) })
       })
-      .catch(error => this.setState({ error }))
+      .catch(error => this.setState({ error: error.message }))
   }
 
   render() {
@@ -54,6 +76,7 @@ class App extends Component {
           <Filters
             filters={this.state.filters}
             genres={this.state.genres}
+            currentMoviesGenres={this.state.uniqueMoviesGenres}
             onChangeGenreFilters={this.onChangeGenreFilters}
             onChangeMinRating={this.onChangeMinRating}
           />

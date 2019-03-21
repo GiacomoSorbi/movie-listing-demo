@@ -7,6 +7,7 @@
 
 .movie-poster {
   width: 350px;
+  max-width: 50%;
 }
 
 .movie-info {
@@ -16,6 +17,7 @@
 
 .movie-card .movie-card-content {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   background: lightgreen;

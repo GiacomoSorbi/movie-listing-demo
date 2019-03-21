@@ -5,7 +5,7 @@ import Filter from '../filter'
 const Filters = props => (
   <section className='movie-filters'>
     <div className='movie-filters-genres'>
-      {Object.keys(props.genres).map(genre => (
+      {props.currentMoviesGenres.map(genre => (
         <Filter
           key={genre}
           name={props.genres[genre]}
