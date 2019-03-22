@@ -9,6 +9,7 @@ const MovieCard = props => (
       <img
         className='movie-poster'
         src={`${API.IMAGES_URI}w300${props.movie.poster_path}`}
+        alt={props.movie.title}
       />
       <div className='movie-info'>
         <h3>{parseTitle(props.movie)}</h3>

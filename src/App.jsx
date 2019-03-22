@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css'
+import './app.css'
 import { API } from './constants'
 import { parseGenres } from './utilities'
 import AppHeader from './components/app-header'
@@ -18,7 +18,7 @@ class App extends Component {
           : this.state.filters.filter(filter => filter !== id),
     })
   }
-  onChangeGenreMinRating = event =>
+  onChangeMinRating = event =>
     this.setState({ minRating: +event.currentTarget.value })
 
   componentDidMount() {
@@ -28,7 +28,11 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(res => {
-        this.setState({ movies: res.results })
+        this.setState({
+          movies: res.results.sort(
+            (movA, movB) => movB.popularity - movA.popularity,
+          ),
+        })
       })
       .catch(error => this.setState({ error }))
     //fetching genre list
@@ -51,7 +55,7 @@ class App extends Component {
             filters={this.state.filters}
             genres={this.state.genres}
             onChangeGenreFilters={this.onChangeGenreFilters}
-            onChangeGenreMinRating={this.onChangeGenreMinRating}
+            onChangeMinRating={this.onChangeMinRating}
           />
           <MovieList
             error={this.state.error}

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should have a consistent structure 1`] = `
+<App>
+  <div
+    className="app"
+  >
+    <AppHeader>
+      <header
+        className="app-header"
+      >
+        <div
+          className="app-logo"
+        />
+        <h1>
+          Currently airing movies
+        </h1>
+        <div
+          className="app-logo"
+        />
+      </header>
+    </AppHeader>
+    <main>
+      <Filters
+        filters={Array []}
+        genres={Array []}
+        onChangeGenreFilters={[Function]}
+        onChangeMinRating={[Function]}
+      >
+        <section
+          className="movie-filters"
+        >
+          <div
+            className="movie-filters-genres"
+          />
+          <input
+            defaultValue="3"
+            id="min-rating"
+            max="10"
+            min="0"
+            onChange={[Function]}
+            step="0.5"
+            type="number"
+          />
+          <label
+            htmlFor="min-rating"
+          >
+            Minimum Rating
+          </label>
+        </section>
+      </Filters>
+      <MovieList
+        error={null}
+        filters={Array []}
+        genres={Array []}
+        minRating={0}
+        movies={Array []}
+      >
+        <section
+          className="movie-list"
+        />
+      </MovieList>
+    </main>
+  </div>
+</App>
+`;

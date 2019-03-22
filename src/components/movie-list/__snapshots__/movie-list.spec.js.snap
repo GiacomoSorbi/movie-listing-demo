@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieList should have a consistent structure 1`] = `
+<MovieList
+  filters={
+    Array [
+      2,
+    ]
+  }
+  genres={
+    Object {
+      "12": "Feline Action",
+      "15": "Feline Formation Novel",
+      "18": "Feline Adventure",
+      "19432": "Feline Philosophy",
+      "23": "Feline Romance",
+      "24": "Feline Western",
+      "26": "Feline Drama",
+    }
+  }
+  minRating="7"
+  movies={
+    Array [
+      Object {
+        "genre_ids": Array [
+          12,
+          15,
+          26,
+          19432,
+        ],
+        "original_title": "A Feline Adventure",
+        "overview": "Pippi is a cat on a quest to sleep more",
+        "poster_path": "/pippi.jpg",
+        "title": "Pippi the Cat",
+        "vote_average": 9,
+      },
+      Object {
+        "genre_ids": Array [
+          12,
+          18,
+          24,
+          26,
+          19432,
+        ],
+        "original_title": "the Revenge of Fluffy",
+        "overview": "A Daring Fight for the Last Straw of Catnip",
+        "poster_path": "/pippi2.jpg",
+        "title": "Pippi the Cat II",
+        "vote_average": 7.5,
+      },
+      Object {
+        "genre_ids": Array [
+          12,
+          18,
+          23,
+          26,
+          19432,
+        ],
+        "original_title": "Pippi the Cat III",
+        "overview": "Pippi Sleeps for 2 Hours and More!",
+        "poster_path": "/pippi3.jpg",
+        "title": "Pippi the Cat III",
+        "vote_average": 10,
+      },
+    ]
+  }
+  onChangeGenreFilters={[MockFunction]}
+  onChangeMinRating={[MockFunction]}
+>
+  <section
+    className="movie-list"
+  />
+</MovieList>
+`;
