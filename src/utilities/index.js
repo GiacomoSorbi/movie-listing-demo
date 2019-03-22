@@ -15,7 +15,7 @@ export const parseTitle = movie =>
       : ''
   }`
 
-export const filterMovies = (movies, filters, minRating) =>
+export const filterMovies = (movies, filters = [], minRating = 3) =>
   movies.filter(
     movie =>
       filters.every(filter => movie.genre_ids.includes(filter)) &&

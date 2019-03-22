@@ -1,4 +1,5 @@
 import React from 'react'
+import './movie-list.css'
 import MovieCard from '../movie-card'
 import { filterMovies } from '../../utilities'
 

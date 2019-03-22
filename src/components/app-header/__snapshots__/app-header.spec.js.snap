@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddHeader should have a consistent structure 1`] = `
+<AppHeader>
+  <header
+    className="app-header"
+  >
+    <div
+      className="app-logo"
+    />
+    <h1>
+      Currently airing movies
+    </h1>
+    <div
+      className="app-logo"
+    />
+  </header>
+</AppHeader>
+`;

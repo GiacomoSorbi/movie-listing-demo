@@ -16,11 +16,11 @@ const Filters = props => (
     </div>
     <input
       type='number'
-      defaultValue='0'
+      defaultValue='3'
       min='0'
       max='10'
       step='0.5'
-      onChange={props.onChangeGenreMinRating}
+      onChange={props.onChangeMinRating}
       id='min-rating'
     />
     <label htmlFor='min-rating'>Minimum Rating</label>

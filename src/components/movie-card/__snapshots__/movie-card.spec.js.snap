@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should have a consistent structure 1`] = `
+<MovieCard
+  genres={
+    Object {
+      "12": "Feline Action",
+      "15": "Feline Formation Novel",
+      "18": "Feline Adventure",
+      "19432": "Feline Philosophy",
+      "23": "Feline Romance",
+      "24": "Feline Western",
+      "26": "Feline Drama",
+    }
+  }
+  movie={
+    Object {
+      "genre_ids": Array [
+        12,
+        15,
+        26,
+        19432,
+      ],
+      "original_title": "A Feline Adventure",
+      "overview": "Pippi is a cat on a quest to sleep more",
+      "poster_path": "/pippi.jpg",
+      "title": "Pippi the Cat",
+      "vote_average": 9,
+    }
+  }
+>
+  <div
+    className="movie-card"
+  >
+    <div
+      className="movie-card-content"
+    >
+      <img
+        alt="Pippi the Cat"
+        className="movie-poster"
+        src="http://image.tmdb.org/t/p/w300/pippi.jpg"
+      />
+      <div
+        className="movie-info"
+      >
+        <h3>
+          Pippi the Cat (Original Title: A Feline Adventure)
+        </h3>
+        <div
+          className="movie-genres"
+        >
+          <h4>
+            Genres:
+          </h4>
+          <ul>
+            <li
+              className="genre-item"
+              key="12"
+            >
+              Feline Action
+            </li>
+            <li
+              className="genre-item"
+              key="15"
+            >
+              Feline Formation Novel
+            </li>
+            <li
+              className="genre-item"
+              key="26"
+            >
+              Feline Drama
+            </li>
+            <li
+              className="genre-item"
+              key="19432"
+            >
+              Feline Philosophy
+            </li>
+          </ul>
+        </div>
+        <div
+          className="movie-description desktop-only"
+        >
+          <h4>
+            Description:
+          </h4>
+          <p>
+            Pippi is a cat on a quest to sleep more
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</MovieCard>
+`;
