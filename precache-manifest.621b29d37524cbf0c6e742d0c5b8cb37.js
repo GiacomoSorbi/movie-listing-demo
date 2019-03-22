@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "1bf9b424c3b8cd27da21",
-    "url": "/movie-listing-demo/static/css/main.1879d943.chunk.css"
+    "revision": "19f31fd8af3f4dbfe382",
+    "url": "/movie-listing-demo/static/css/main.59adeeaf.chunk.css"
   },
   {
-    "revision": "1bf9b424c3b8cd27da21",
+    "revision": "19f31fd8af3f4dbfe382",
     "url": "/movie-listing-demo/static/js/main.32b014e8.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/movie-listing-demo/static/media/film-roll.d291744e.svg"
   },
   {
-    "revision": "8245dbe0df7453ee1ab169f1c9e36e1a",
+    "revision": "dcc9ffd2ea363abf5e834ecda8538019",
     "url": "/movie-listing-demo/index.html"
   }
 ];
