@@ -1,13 +1,25 @@
 .movie-card {
   position: relative;
-  margin: 5px;
+  margin: 2vmin 0;
+  width: 96vw;
   font-size: calc(10px + 2vmin);
 }
 
+.movie-poster {
+  width: 350px;
+}
+
+.movie-info {
+  margin-left: 2vmin;
+  width: 100%;
+}
+
 .movie-card .movie-card-content {
+  display: flex;
+  align-items: flex-start;
   background: lightgreen;
   color: darkblue;
-  padding: 2vh;
+  padding: 2vmin;
   position: relative;
   text-align: left;
   top: 0;
@@ -24,11 +36,11 @@
 }
 
 .movie-card:hover .movie-card-content {
-  top: -5px;
-  left: -5px;
-  box-shadow: 5px 5px 5px darkgray;
-  transition: 0.2s top ease-in-out, 0.2s left ease-in-out,
-    0.2s box-shadow ease-in-out;
+  top: -2vmin;
+  left: -2vmin;
+  box-shadow: 2vmin 2vmin 2vmin darkgreen;
+  transition: 0.1s top ease-in-out, 0.1s left ease-in-out,
+    0.1s box-shadow ease-in-out;
 }
 
 .movie-card .movie-card-content .movie-genres {
@@ -63,7 +75,8 @@
 
 @media only screen and (min-width: 768px) {
   .movie-card {
-    width: 30%;
+    margin: 2vmin 0;
+    width: 48vw;
     margin-bottom: 8vmin;
   }
 }

@@ -10,5 +10,14 @@ export const parseGenres = genres =>
 
 export const parseTitle = movie =>
   `${movie.title}${
-    movie.title !== movie.original_title ? ` (${movie.original_title})` : ''
+    movie.title !== movie.original_title
+      ? ` (Original Title: ${movie.original_title})`
+      : ''
   }`
+
+export const filterMovies = (movies, filters, minRating) =>
+  movies.filter(
+    movie =>
+      filters.every(filter => movie.genre_ids.includes(filter)) &&
+      movie.vote_average >= minRating,
+  )

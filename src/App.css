@@ -5,13 +5,21 @@
 
 .app-logo {
   width: 20%;
-  height: 40vmin;
+  height: 25vmin;
   background-image: url('./assets/film-roll.svg');
   background-repeat: repeat-y;
   background-position-x: center;
   background-size: contain;
-  animation: app-logo-run infinite 60s linear;
+  animation: app-logo-run infinite 25s linear;
   pointer-events: none;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
 }
 
 .app-logo:last-child {
@@ -23,11 +31,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: calc(1s0px + 3vmin);
+  font-size: calc(10px + 2.5vmin);
 }
 
-main {
+.app-header h1 {
+  margin: 0;
+}
+
+.movie-list {
   padding: 1vmin;
+  background: lightseagreen;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -47,10 +60,20 @@ main {
 @media only screen and (min-width: 768px) {
   .app-logo {
     background-size: cover;
+    height: 40vmin;
     animation: app-logo-run infinite 40s linear;
   }
-  main {
+
+  .movie-list {
     flex-direction: row;
     align-items: stretch;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
   }
 }
