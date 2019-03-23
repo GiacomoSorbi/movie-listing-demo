@@ -1,5 +1,5 @@
 {
-  "main.css": "/movie-listing-demo/static/css/main.2dc80653.chunk.css",
+  "main.css": "/movie-listing-demo/static/css/main.d6dd1447.chunk.css",
   "main.js": "/movie-listing-demo/static/js/main.6fa49d4a.chunk.js",
   "main.js.map": "/movie-listing-demo/static/js/main.6fa49d4a.chunk.js.map",
   "runtime~main.js": "/movie-listing-demo/static/js/runtime~main.374ec37c.js",
@@ -7,8 +7,8 @@
   "static/js/2.cb7268be.chunk.js": "/movie-listing-demo/static/js/2.cb7268be.chunk.js",
   "static/js/2.cb7268be.chunk.js.map": "/movie-listing-demo/static/js/2.cb7268be.chunk.js.map",
   "index.html": "/movie-listing-demo/index.html",
-  "precache-manifest.529715a90ced7b71e73223f6176968dc.js": "/movie-listing-demo/precache-manifest.529715a90ced7b71e73223f6176968dc.js",
+  "precache-manifest.49b1ff66b6bf81bd0135a09c54e8662d.js": "/movie-listing-demo/precache-manifest.49b1ff66b6bf81bd0135a09c54e8662d.js",
   "service-worker.js": "/movie-listing-demo/service-worker.js",
-  "static/css/main.2dc80653.chunk.css.map": "/movie-listing-demo/static/css/main.2dc80653.chunk.css.map",
+  "static/css/main.d6dd1447.chunk.css.map": "/movie-listing-demo/static/css/main.d6dd1447.chunk.css.map",
   "static/media/movie-card.css": "/movie-listing-demo/static/media/film-roll.d291744e.svg"
 }
